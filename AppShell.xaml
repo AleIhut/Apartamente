@@ -7,6 +7,7 @@
     Shell.FlyoutBehavior="Disabled"
     BackgroundColor="Aqua"
     >
+   
 
     <TabBar>
         <ShellContent
@@ -17,7 +18,11 @@
         <ShellContent
             Title="Despre"
             ContentTemplate="{DataTemplate local:AboutPage}"
-             />
-    </TabBar>
+              />
+        <ShellContent 
+            Title="Obiectivele mele" 
+            ContentTemplate="{DataTemplate local:ListaTuturorOb}" 
+            />
+    </TabBar  >
 
 </Shell>
