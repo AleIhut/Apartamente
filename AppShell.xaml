@@ -15,14 +15,20 @@
             Title="Administrare"
             ContentTemplate="{DataTemplate local:MainPage}"
              />
-        <ShellContent
-            Title="Despre"
-            ContentTemplate="{DataTemplate local:AboutPage}"
-              />
+       
+       
         <ShellContent 
             Title="Obiectivele mele" 
             ContentTemplate="{DataTemplate local:ListaTuturorOb}" 
             />
+        <ShellContent 
+            Title="Apartamentele mele" 
+                      ContentTemplate="{DataTemplate local:IntrareApartament}"
+                      />
+        <ShellContent
+            Title="Despre"
+            ContentTemplate="{DataTemplate local:AboutPage}"
+              />
     </TabBar  >
 
 </Shell>

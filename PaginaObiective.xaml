@@ -10,6 +10,7 @@
                 <local:Validare />
             </Editor.Behaviors>
         </Editor>
+        <Picker x:Name="AlegeApartament" Title="Introdu numele apartamentului"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />

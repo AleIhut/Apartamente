@@ -11,7 +11,9 @@ public partial class PaginaObiective : ContentPage
 	{
 		var slist = (ListaObiective)BindingContext;
 		slist.Date = DateTime.UtcNow;
-		await App.Database.SaveShopListAsync(slist);
+        Apartament selectedShop = (AlegeApartament.SelectedItem as Apartament);
+		slist.ApartamentID = selectedShop.ID;
+        await App.Database.SaveShopListAsync(slist);
 		await Navigation.PopAsync(); 
 	}
     async void OnDeleteButtonClicked(object sender, EventArgs e) 
@@ -30,6 +32,9 @@ public partial class PaginaObiective : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+        var items = await App.Database.GetShopsAsync();
+		AlegeApartament.ItemsSource = (System.Collections.IList)items;
+        AlegeApartament.ItemDisplayBinding = new Binding("DetaliiApartament");
         var shopl = (ListaObiective)BindingContext;
         VizualizareaObiective.ItemsSource = await App.Database.GetListProductsAsync(shopl.ID);
     }

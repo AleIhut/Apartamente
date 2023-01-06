@@ -16,6 +16,7 @@ namespace Apartamente.Data
             _database.CreateTableAsync<ListaObiective>().Wait();
             _database.CreateTableAsync<Obiectiv>().Wait(); 
             _database.CreateTableAsync<ObiectivLista>().Wait();
+            _database.CreateTableAsync<Apartament>().Wait();
         }
         public Task<List<ListaObiective>> GetShopListsAsync() { return _database.Table<ListaObiective>().ToListAsync(); }
         public Task<ListaObiective> GetShopListAsync(int id) { return _database.Table<ListaObiective>().Where(i => i.ID == id).FirstOrDefaultAsync(); }
@@ -57,5 +58,12 @@ namespace Apartamente.Data
             
             listaobiectiveid);
         }
+        public Task<List<Apartament>> GetShopsAsync() 
+        {
+            return _database.Table<Apartament>().ToListAsync(); 
+        }
+        public Task<int> SaveShopAsync(Apartament apartament) 
+        {
+            if (apartament.ID != 0) { return _database.UpdateAsync(apartament); } else { return _database.InsertAsync(apartament); } }
     }
 }

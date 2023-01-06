@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using SQLiteNetExtensions.Attributes;
 
 namespace Apartamente.Models
 {
@@ -14,5 +15,7 @@ namespace Apartamente.Models
         [MaxLength(1000), Unique]
         public string Description { get; set; }
         public DateTime Date { get; set; }
+        [ForeignKey(typeof(Apartament))] 
+        public int ApartamentID { get; set; }
     }
 }
