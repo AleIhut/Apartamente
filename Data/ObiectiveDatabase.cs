@@ -48,9 +48,14 @@ namespace Apartamente.Data
         public Task<List<Obiectiv>> GetProductsAsync()
         { return _database.Table<Obiectiv>().ToListAsync(); }
         public Task<int> SaveListProductAsync(ObiectivLista listp) { if (listp.ID != 0) { return _database.UpdateAsync(listp); } else { return _database.InsertAsync(listp); } }
-        public Task<List<Obiectiv>> GetListProductsAsync(int shoplistid)
+        public Task<List<Obiectiv>> GetListProductsAsync(int listaobiectiveid)
         {
-            return _database.QueryAsync<Obiectiv>("select P.ID, P.Description from Product P" + " inner join ListProduct LP" + " on P.ID = LP.ProductID where LP.ShopListID = ?", shoplistid);
+            return _database.QueryAsync<Obiectiv>(
+            "select O.ID, O.Description from Obiectiv O"
+            + " inner join ObiectivLista OL" 
+            + " on O.ID = OL.ObiectivID where OL.ListaObiectiveID = ?", 
+            
+            listaobiectiveid);
         }
     }
 }
