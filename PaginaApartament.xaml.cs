@@ -18,7 +18,8 @@ public partial class PaginaApartament : ContentPage
     async void OnShowMapButtonClicked(object sender, EventArgs e)
     {
         var apartament = (Apartament)BindingContext;
-        var address = apartament.Adress; var locations = await Geocoding.GetLocationsAsync(address);
+        var address = apartament.Adress; 
+        var locations = await Geocoding.GetLocationsAsync(address);
         var options = new MapLaunchOptions { Name = "Apartamentul meu favorit" };
         var location = locations?.FirstOrDefault();
         // var myLocation = await Geolocation.GetLocationAsync();

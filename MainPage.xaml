@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Apartamente.MainPage"
-             BackgroundColor="Silver">
+             BackgroundColor="Black">
    
 
         <ScrollView>
@@ -21,19 +21,20 @@
                 SemanticProperties.HeadingLevel="Level1"
                 HeightRequest="200"
                 WidthRequest="500"
-                HorizontalOptions="StartAndExpand" />
+                HorizontalOptions="Center"/>
             
            <Label
                 Text="Apartamentele mele "
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="40"
-               TextColor="Silver"
-                HorizontalOptions="EndAndExpand"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="Silver"
+                HorizontalOptions="Center"
                /> 
             <Label
-                Text="Aici ai posibilitatea dea a-ți stoca toate detaliile necesare în legătură cu apartamentele tale."
+                Text="Nu uita ce ai de făcut! Clienții merită tot ce e mai bun!"
                 SemanticProperties.HeadingLevel="Level1"
-                SemanticProperties.Description="Aici ai posibilitatea dea a-ți stoca toate detaliile necesare în legătură cu apartamentele tale.  c"
+                SemanticProperties.Description="Nu uita ce ai de făcut! Clienții merită tot ce e mai bun!"
                 FontSize="20"
                 TextColor="Silver"
                 HorizontalOptions="Center" />

@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Apartamente.AboutPage"
              Title="Despre"
-             BackgroundColor="Silver">
+             BackgroundColor="Black">
     
             <VerticalStackLayout Spacing="20" Margin="20" BackgroundColor="Black">
         <HorizontalStackLayout Spacing="10">
@@ -12,7 +12,7 @@
             <Label FontSize="22" Text="" VerticalOptions="End" />
         </HorizontalStackLayout>
         <Label TextColor="Silver" Text="Aceasta aplicatie are rolul de a ajuta proprietarii de apartamente să le managerieze." />
-        <Label TextColor="Silver" Text="În cazul celor care au mai multe apartamente, ei pot să își noteze aici toate detaliile necesare și ceea ce au de reparat la fiecare apartament." />
+        <Label TextColor="Silver" Text="În cazul celor care au mai multe apartamente, ei pot să își noteze aici toate detaliile necesare și ceea ce au de reparat/cumpărat la fiecare apartament." />
         <Image Source="p2.png"
             SemanticProperties.Description="Administrare proprietăi"
             HeightRequest="354"
