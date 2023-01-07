@@ -15,6 +15,12 @@ public partial class PaginaApartament : ContentPage
         await App.Database.SaveShopAsync(apartament);
         await Navigation.PopAsync();
     }
+    async void OnDeleteButtonClicked(object sender, EventArgs e)
+    {
+        var apartament = (Apartament)BindingContext;
+        await App.Database.DeleteShopAsync(apartament);
+        await Navigation.PopAsync();
+    }
     async void OnShowMapButtonClicked(object sender, EventArgs e)
     {
         var apartament = (Apartament)BindingContext;
@@ -22,8 +28,8 @@ public partial class PaginaApartament : ContentPage
         var locations = await Geocoding.GetLocationsAsync(address);
         var options = new MapLaunchOptions { Name = "Apartamentul meu favorit" };
         var location = locations?.FirstOrDefault();
-        // var myLocation = await Geolocation.GetLocationAsync();
-        var myLocation = new Location(46.7731796289, 23.6213886738);
+        var myLocation = await Geolocation.GetLocationAsync();
+        //var myLocation = new Location(46.7731796289, 23.6213886738);
         
         var distance = myLocation.CalculateDistance(location, DistanceUnits.Kilometers);
         if (distance < 4)

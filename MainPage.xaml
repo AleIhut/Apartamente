@@ -32,9 +32,9 @@
                 HorizontalOptions="Center"
                /> 
             <Label
-                Text="Nu uita ce ai de făcut! Clienții merită tot ce e mai bun!"
+                Text="Nu uita ce ai de făcut! Clienții tăi merită tot ce e mai bun!"
                 SemanticProperties.HeadingLevel="Level1"
-                SemanticProperties.Description="Nu uita ce ai de făcut! Clienții merită tot ce e mai bun!"
+                SemanticProperties.Description="Nu uita ce ai de făcut! Clienții tăi merită tot ce e mai bun!"
                 FontSize="20"
                 TextColor="Silver"
                 HorizontalOptions="Center" />

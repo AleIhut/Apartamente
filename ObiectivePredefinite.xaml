@@ -33,7 +33,7 @@ Clicked="OnDeleteButtonClicked"/>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Grid.Row="2" Grid.Column="0" Text="Adauga la apartamentul tau!"
+                <Button Grid.Row="2" Grid.Column="0" Text="Adaugă la apartamentul tau!"
                         MaximumWidthRequest="200" 
                         Clicked="OnAddButtonClicked" />
             </Grid>

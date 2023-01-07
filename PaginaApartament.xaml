@@ -2,11 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Apartamente.PaginaApartament"
-             Title="PaginaApartament">
+             Title="Apartament">
     <ContentPage.Content>
         <StackLayout Margin="20">
             <Editor Placeholder="Introdu numele apartamentului" Margin="20"
 Text="{Binding NumeApartament}"
+TextColor="Black"
 HeightRequest="50" />
             <Editor Placeholder="Introdu adresa apartamentului" Margin="20"
 Text="{Binding Adress}"
@@ -21,14 +22,17 @@ HeightRequest="50" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Salveaza Apartamentul" Grid.Column="0" MaximumWidthRequest="200"
+                <Button Text="Salvează" Grid.Column="0" MaximumWidthRequest="200"
 Clicked="OnSaveButtonClicked" />
-                <Button Text="Apartamentul localizat" Grid.Column="1"
+                <Button Text="Șterge" Grid.Column="1" MaximumWidthRequest="200"
+Clicked="OnDeleteButtonClicked" />
+
+            </Grid>
+            <Button Text="Locație" Grid.Column="1"
                         MaximumWidthRequest="200" 
                         Clicked="OnShowMapButtonClicked">
                     
                 </Button>
-            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -65,5 +65,10 @@ namespace Apartamente.Data
         public Task<int> SaveShopAsync(Apartament apartament) 
         {
             if (apartament.ID != 0) { return _database.UpdateAsync(apartament); } else { return _database.InsertAsync(apartament); } }
+
+        public Task<int> DeleteShopAsync(Apartament apartament)
+        {
+            return _database.DeleteAsync(apartament);
+        }
     }
 }

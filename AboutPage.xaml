@@ -11,8 +11,9 @@
             <Label FontSize="22" FontAttributes="Bold" TextColor="Silver" Text="Administrare proprietati" VerticalOptions="End" />
             <Label FontSize="22" Text="" VerticalOptions="End" />
         </HorizontalStackLayout>
-        <Label TextColor="Silver" Text="Aceasta aplicatie are rolul de a ajuta proprietarii de apartamente să le managerieze." />
-        <Label TextColor="Silver" Text="În cazul celor care au mai multe apartamente, ei pot să își noteze aici toate detaliile necesare și ceea ce au de reparat/cumpărat la fiecare apartament." />
+        <Label TextColor="Silver" Text="Această aplicație are rolul de a ajuta proprietarii de apartamente să le managerieze." />
+        <Label TextColor="Silver" Text="Cum funcționează? Ei bine, poți să notezi cu ajutorul aplicației tot ceea ce ai de reparat/cumpărat pentru fiecare 
+               apartament. Astfel te vei asigura că nu vei uita nimic. Mai mult de atât, în momentul în care te vei afla în zona unui apartament pentru care ai de făcut ceva, vei fi notificat!" />
         <Image Source="p2.png"
             SemanticProperties.Description="Administrare proprietăi"
             HeightRequest="354"

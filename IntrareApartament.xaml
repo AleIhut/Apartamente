@@ -2,14 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Apartamente.IntrareApartament"
-             Title="Apartament">
+             Title="Apartamentele mele">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Adauga apartament" Clicked="OnShopAddedClicked" />
+        <ToolbarItem Text="+" Clicked="OnShopAddedClicked" />
     </ContentPage.ToolbarItems>
     <ListView x:Name="VizualizareObiective" Margin="20" ItemSelected="OnListViewItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding NumeApartament}" Detail="{Binding Adress}" />
+                <TextCell Text="{Binding NumeApartament}" TextColor="Black" Detail="{Binding Adress}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
